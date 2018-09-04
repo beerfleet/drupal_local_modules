@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file 
+ * Beep Sim
+ */
+
+function beep_beep($msg) {
+  watchdog('beep', $msg);
+}
+
+/**
+ * Implementation of hook_user_login()
+ */
+function beep_user_login($edit, $account) {
+  xdebug_break();
+  beep_beep($account->name . ' logged in !!!');
+}
+
+/**
+ * Implementation of hook_node_insert()
+ */
+function beep_node_insert($node) {
+  global $user;
+  xdebug_break();
+  beep_beep($user->name .  "added node $node" );
+}

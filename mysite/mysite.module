@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implements hook_init()
+ */
+function mysite_init() {
+  $path = drupal_get_path('module', 'mysite');
+  drupal_add_css($path . '/css/mysite.css');
+  drupal_add_css($path . '/css/mysite-special.css', array('preprocess' => FALSE, 'weight' => -20));
+}
+
+/**
+ * Implements hook_custom_theme() 
+ 
+function mysite_custom_theme() {
+  $themes = array();
+  $themes[0] = 'garland';
+  $themes[1] = 'bartik';
+  $themes[2] = 'seven';
+  $themes[3] = 'mytheme';
+  $themes[4] = 'sky';
+  $themes[5] = 'bat';
+  $themes[6] = 'zen';
+  
+  //$day = date('w');
+  return $themes[array_rand($themes)];
+}*/

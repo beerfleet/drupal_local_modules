@@ -1,0 +1,5 @@
+name = menufun
+description = Fun with the menu
+core = 7.x
+package = Pro Drupal Development
+files[] = menufun.module

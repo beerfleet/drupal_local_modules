@@ -1,0 +1,5 @@
+name = beep
+description = Beep simulator
+core = 7.x
+package = Pro Drupal Development
+files[] = beep.module
