@@ -1,0 +1,91 @@
+<?php
+
+/**
+ * Implements hook_field_schema()
+ */
+function nutritioninfo_field_schema() {
+  $columns = array(
+    'calories' => array(
+      'description' => 'Nr o calories',
+      'type' => 'varchar',
+      'lenght' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'carbohydrate_content' => array(
+      'description' => 'Nr o grams o carbs',
+      'type' => 'varchar',
+      'lenght' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'cholesterol_content' => array(
+      'description' => 'Nr o milligrams o collesterols',
+      'type' => 'varchar',
+      'lenght' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'fat_content' => array(
+      'description' => 'Nr o grams o fat',
+      'type' => 'varchar',
+      'lenght' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'fiber_content' => array(
+      'description' => 'Nr o grams o fiber',
+      'type' => 'varchar',
+      'lenght' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'protein_content' => array(
+      'description' => 'Nr o grams o protein',
+      'type' => 'varchar',
+      'lenght' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'saturated_fat_content' => array(
+      'description' => 'Nr o grams o saturated fat',
+      'type' => 'varchar',
+      'lenght' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'sodium_content' => array(
+      'description' => 'Nr o milligrams o sodium',
+      'type' => 'varchar',
+      'lenght' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'sugar_content' => array(
+      'description' => 'Nr o milligrams o sugar',
+      'type' => 'varchar',
+      'lenght' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'trans_fat_content' => array(
+      'description' => 'Nr o grams o trans fat',
+      'type' => 'varchar',
+      'lenght' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+    'unsaturated_fat_content' => array(
+      'description' => 'Nr o grams o unsaturated fat',
+      'type' => 'varchar',
+      'lenght' => 255,
+      'not null' => FALSE,
+      'default' => '',
+    ),
+  );
+
+  return array(
+    'columns' => $columns,
+      // TODO Add indexes.
+  );
+}

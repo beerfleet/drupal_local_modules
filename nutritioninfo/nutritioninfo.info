@@ -1,0 +1,4 @@
+name = Nutrition Info Field
+description = Defines a nutrition info field based on http://schema.org/NutritionInformation
+core = 7.x
+package = Fields

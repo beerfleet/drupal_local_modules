@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * Implements hook_field_info()
+ */
+function nutritioninfo_field_info() {
+  $fields = array();
+
+  $fields['nutritioninfo'] = array(
+    'label' => t('Nutrition info'),
+    'description' => t('Nutrition information.'),
+    'settings' => array(),
+    'instance_settings' => array(),
+    'default_widget' => 'nutritioninfo_standard',
+    'default_formatter' => 'nutritioninfo_default',
+  );
+
+  return $fields;
+}
+
+/**
+ * Implements hook_field_validate
+ */
+function nutritioninfo_field_validate($entity_type, $entity, $field, $instance, $langcode, $items, &$errors) {
+  // tempty
+}
+
+/**
+ * Implements hook_field_is_empty
+ */
+function nutritioninfo_field_is_empty($item, $field) {
+  return empty($item['calories']) && empty($item['carbohydrate_content']) && empty($item['cholesterol_content']) && empty($item['fat_content']) && empty($item['fiber_content']) && empty($item['protein_content']) && empty($item['saturated_fat_content']) && empty($item['serving_size']) && empty($item['sodium_content']) && empty($item['sugar_content']) && empty($item['trans_fat_content']) && empty($item['unsaturated_fat_content']);
+}
+
+/**
+ * Impl hook field widget info
+ */
+function nutritioninfo_field_widget_info() {
+  $widgets = [];
+  $widgets['nutritioninfo_standard'] = [
+    'label' => t('Nutrition Info'),
+    'field_types' => ['nutritioninfo'],
+  ];
+
+  return $widgets;
+}
+
+/**
+ * Implements hook_field_widget_form();
+ */
+function nutritioninfo_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  // Drupal 7 dev bu example
+}
