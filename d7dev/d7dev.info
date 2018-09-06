@@ -1,0 +1,5 @@
+name = d7dev
+description = Custom module for tits and tats
+core = 7.x
+package = Custom
+files[] = d7dev.module
